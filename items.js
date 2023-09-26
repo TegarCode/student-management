@@ -3,6 +3,7 @@ let USERS = [
     id: 1,
     fullname: "alfi sahri",
     username: "alfi",
+    role: "editor", // viewer | editor
     password: "$2b$10$hW86zCzYTxAnAkEDiAK11u.hCMXhkq7Q6B3.qYX6yu99kWdxGdW4O",
   },
 ];
