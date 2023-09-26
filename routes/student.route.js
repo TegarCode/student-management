@@ -3,7 +3,7 @@ const { STUDENTS } = require("../items");
 const { protect } = require("../middleware");
 const router = express.Router();
 
-router.get("/", protect, (req, res) => {
+router.get("/", (req, res) => {
   return res.json({ status: "success", data: STUDENTS });
 });
 
