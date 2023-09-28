@@ -27,7 +27,7 @@ let STUDENTS = [
     gender: "female",
     phone_number: "0815182192872",
     created_by_id: 1,
-    users: [
+    users_role: [
       { user_id: 2, role: "editor" },
       { user_id: 3, role: "viewer" },
     ],
@@ -39,7 +39,7 @@ let STUDENTS = [
     gender: "female",
     phone_number: "0812781291021",
     created_by_id: 2,
-    users: [
+    users_role: [
       { user_id: 3, role: "editor" },
       { user_id: 1, role: "viewer" },
     ],
