@@ -12,6 +12,8 @@ router.get("/", (req, res) => {
   });
 });
 
+router.put("/invite", (req, res) => {});
+
 router.get("/:id", protect, (req, res) => {
   const id = req.params.id;
   const loggedInUser = req.user;
