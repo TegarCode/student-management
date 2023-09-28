@@ -12,7 +12,7 @@ router.get("/", (req, res) => {
   });
 });
 
-router.get("/:id", protect("viewer"), (req, res) => {
+router.get("/:id", protect, (req, res) => {
   const id = req.params.id;
   const loggedInUser = req.user;
 

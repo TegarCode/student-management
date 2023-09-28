@@ -3,12 +3,11 @@ const { STUDENTS } = require("../items");
 const { protect } = require("../middleware");
 const router = express.Router();
 
-router.get("/", protect("viewer"), (req, res) => {
-  console.log("user => ", req.user);
+router.use(protect);
+router.get("/", (req, res) => {
   return res.json({ status: "success", data: STUDENTS });
 });
 
-router.use(protect("editor"));
 router.post("/", (req, res) => {
   const newStudent = { id: STUDENTS.length + 1, ...req.body };
   STUDENTS.push(newStudent);
