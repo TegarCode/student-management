@@ -11,9 +11,9 @@ router.get("/", (req, res) => {
   // Menyaring data mahasiswa berdasarkan undangan yang dimiliki oleh pengguna saat ini
   const filteredStudents = STUDENTS.map((student) => {
     const userRole = student.users_role.find((role) => role.user_id === loggedInUser.id);
-    console.log(student)
+    //
     // Jika pengguna adalah pemilik (owner) atau memiliki undangan ke mahasiswa tersebut
-    if (student.id === loggedInUser.id || userRole) {
+    if (student.created_by_id === loggedInUser.id || userRole) {
       // Membuat salinan objek mahasiswa dengan perubahan pada properti 'role'
       const studentCopy = {
         id: student.id,
